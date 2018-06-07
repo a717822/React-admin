@@ -1,5 +1,5 @@
 # React-admin
-React + ant design + babel-polyfill + react-router 模仿 ant design Pro样式（持续更新）
+React + ant design + babel-polyfill + react-router/react-router-dom 模仿 ant design Pro样式（持续更新）
 
 ## 更新日志
 
@@ -18,10 +18,11 @@ npm install
 npm start
 ```
 
-## 自行配置
+## 依赖介绍
 ``` bash
-1、
-
+1、ant design 一个服务于企业级产品的设计体系，基于『确定』和『自然』的设计价值观和模块化的解决方案，让设计者专注于更好的用户体验。
+2、babel-polyfill 解决ES5、ES6对IE浏览器的解决方案
+3、react-router/react-router-dom React路由
 ```
 
 
