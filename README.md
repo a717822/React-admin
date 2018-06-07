@@ -20,9 +20,16 @@ npm start
 
 ## 依赖介绍
 ``` bash
-1、ant design 一个服务于企业级产品的设计体系，基于『确定』和『自然』的设计价值观和模块化的解决方案，让设计者专注于更好的用户体验。
+1、ant design 
 2、babel-polyfill 解决ES5、ES6对IE浏览器的解决方案
 3、react-router/react-router-dom React路由
+```
+
+## 链接
+``` bash
+1、Ant Design https://ant.design/index-cn
+2、Ant Design Pro https://pro.ant.design/index-cn
+3、React https://reactjs.org/
 ```
 
 
