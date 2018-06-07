@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .ant-table-body{
+        overflow-x: scroll;
+    }
+    .ant-table-body table{
+        width: 768px;
+    }
+    .ant-card{
+        width: 315px;
+    }
+}

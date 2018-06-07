@@ -1,0 +1,13 @@
+.logo {
+    height: 32px;
+    margin: 16px;
+    line-height: 32px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+.ant-menu-item-group-title{
+    color: #fff;
+    background-color: #000;
+}

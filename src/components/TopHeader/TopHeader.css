@@ -1,0 +1,35 @@
+.topHeader{
+    position: relative;
+    background-color: #fff;
+    padding: 0;
+    box-shadow: 0 1px 4px rgba(0,21,41,.08);
+}
+.topHeader .header{
+    float: right;
+    height: 100%;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.topHeader .header span{
+    margin-left: 10px;
+    font-weight: bold;
+}
+.top_menu .ant-dropdown-menu-item{
+    width: 160px;
+}
+.top_menu .ant-dropdown-menu-item span{
+    margin-left: 20px;
+}
+.ant-layout-sider-zero-width-trigger{
+    top: 11px;
+    z-index: 1;
+}
+.breadcrumb{
+    margin-bottom: 16px;
+}
+
+.pageHeader{
+    background: #fff;
+    padding: 16px 32px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
