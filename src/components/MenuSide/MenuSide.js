@@ -99,7 +99,7 @@ class MenuSide extends  Component {
     render(){
         return(
             <Sider breakpoint="lg" collapsedWidth="0">
-                <div className="logo">Geoparker</div>
+                <div className="logo"></div>
                 <div className={"menu"}>
                     <Menu mode="inline"
                           theme="dark"
