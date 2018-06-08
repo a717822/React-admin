@@ -24,11 +24,16 @@ const menu = (
 class TopHeader extends  Component {
     constructor(props) {
         super(props);
+        let style;
+        if(props.type === 'error') {
+            style = {display:'none'};
+        }
         this.state = {
             cate:sessionStorage.getItem('cate')?sessionStorage.getItem('cate'):'数据管理',
             parentMenu:sessionStorage.getItem('parentMenu')?sessionStorage.getItem('parentMenu'):'',
-            menuItem:sessionStorage.getItem('menuItem')?sessionStorage.getItem('menuItem'):'数据显示'
-        }
+            menuItem:sessionStorage.getItem('menuItem')?sessionStorage.getItem('menuItem'):'数据显示',
+            style:style
+        };
     }
     render(){
         return(
@@ -43,7 +48,7 @@ class TopHeader extends  Component {
                         </Dropdown>
                     </div>
                 </Header>
-                <div className="pageHeader">
+                <div className="pageHeader" style={this.state.style}>
                     <div className="breadcrumb">
                         <Breadcrumb>
                             <Breadcrumb.Item href="#/Dashboard">

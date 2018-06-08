@@ -37,16 +37,22 @@ class MenuSide extends  Component {
                             child:[
                                 {
                                     id:4,
-                                    url:'#/Error_403',
+                                    url:'#/ErrorPage',
                                     icon:'warning',
                                     title:'403'
                                 },
                                 {
                                     id:5,
-                                    url:'/',
-                                    icon:'mail',
-                                    title:'Option 2'
-                                }
+                                    url:'#/ErrorPage',
+                                    icon:'warning',
+                                    title:'404'
+                                },
+                                {
+                                    id:10,
+                                    url:'#/ErrorPage',
+                                    icon:'warning',
+                                    title:'500'
+                                },
                             ]
                         }
                     ]

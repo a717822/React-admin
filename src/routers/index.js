@@ -11,7 +11,7 @@ import '../assets/css/App.css';
 import TableShow from '../Pages/Table/TableShow'
 
 // 错误页面
-import Error_403 from '../Pages/Error_403/Error_403'
+import ErrorPage from '../Pages/ErrorPage/ErrorPage'
 
 const router = [
     {
@@ -27,8 +27,8 @@ const router = [
         component:TableShow
     },
     {
-        path:'/Error_403',
-        component:Error_403
+        path:'/ErrorPage',
+        component:ErrorPage
     },
 ];
 

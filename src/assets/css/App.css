@@ -14,3 +14,32 @@
         width: 315px;
     }
 }
+@media screen and (max-width: 576px){
+    .error_info{
+        display: block;
+        text-align: center;
+    }
+    .error_info .error_bg{
+        padding-right: 0;
+        margin: 0 auto 24px;
+    }
+    .error_content{
+        display: block;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 480px){
+    .error_info .error_bg{
+        margin-bottom: -24px;
+        overflow: hidden;
+    }
+}
+@media screen and (min-width: 769px){
+    .error_info{
+        display: flex;
+    }
+    .error_img{
+        float: right;
+    }
+}
+

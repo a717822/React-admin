@@ -7,7 +7,7 @@ class CopyRight extends Component {
         return(
             <div className="copy_right">
                 <BackTop />
-                Copyright <Icon type="copyright" /> 2018 脚爬客
+                Copyright <Icon type="copyright" /> 2018 Yangzilong
             </div>
 
         )
