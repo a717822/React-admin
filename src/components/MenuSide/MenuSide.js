@@ -88,6 +88,7 @@ class MenuSide extends  Component {
                 },
             ],
             current:sessionStorage.getItem('current') ? sessionStorage.getItem('current'):'1',
+            sub:sessionStorage.getItem('sub') ? sessionStorage.getItem('sub'):'',
         };
     }
     chooseMenu = (e) => {
@@ -101,6 +102,7 @@ class MenuSide extends  Component {
         sessionStorage.setItem('cate',props.cate);
         sessionStorage.setItem('parentMenu',props.parent);
         sessionStorage.setItem('current',e.key);
+        sessionStorage.setItem('sub',props.sub);
     };
     render(){
         return(
@@ -111,7 +113,7 @@ class MenuSide extends  Component {
                           theme="dark"
                           selectedKeys={[this.state.current]}
                           onClick={this.chooseMenu}
-                          defaultOpenKeys={['']}>
+                          defaultOpenKeys={[this.state.sub]}>
                         {
                             this.state.menus.map((cate) => {
                                 return <Menu.ItemGroup key={cate.title}
@@ -151,7 +153,8 @@ class MenuSide extends  Component {
                                                                         return <Menu.Item key={menu.id}
                                                                                           cate={cate.title}
                                                                                           menu={menu.title}
-                                                                                          parent={m.title} >
+                                                                                          parent={m.title}
+                                                                                          sub={m.id}>
                                                                                     <a href={menu.url}>
                                                                                         <Icon type={menu.icon} />
                                                                                         {menu.title}
