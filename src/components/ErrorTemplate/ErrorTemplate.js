@@ -39,7 +39,7 @@ class ErrorTemplate extends Component {
         }
         this.state = {
             data
-        }
+        };
     }
     render(){
         return(

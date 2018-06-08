@@ -37,19 +37,19 @@ class MenuSide extends  Component {
                             child:[
                                 {
                                     id:4,
-                                    url:'#/ErrorPage',
+                                    url:'#/ErrorPage/403',
                                     icon:'warning',
                                     title:'403'
                                 },
                                 {
                                     id:5,
-                                    url:'#/ErrorPage',
+                                    url:'#/ErrorPage/404',
                                     icon:'warning',
                                     title:'404'
                                 },
                                 {
                                     id:10,
-                                    url:'#/ErrorPage',
+                                    url:'#/ErrorPage/500',
                                     icon:'warning',
                                     title:'500'
                                 },
@@ -110,7 +110,8 @@ class MenuSide extends  Component {
                     <Menu mode="inline"
                           theme="dark"
                           selectedKeys={[this.state.current]}
-                          onClick={this.chooseMenu}>
+                          onClick={this.chooseMenu}
+                          defaultOpenKeys={['']}>
                         {
                             this.state.menus.map((cate) => {
                                 return <Menu.ItemGroup key={cate.title}

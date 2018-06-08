@@ -11,7 +11,9 @@ import '../assets/css/App.css';
 import TableShow from '../Pages/Table/TableShow'
 
 // 错误页面
-import ErrorPage from '../Pages/ErrorPage/ErrorPage'
+import ErrorPage_403 from '../Pages/ErrorPage/403'
+import ErrorPage_404 from '../Pages/ErrorPage/404'
+import ErrorPage_500 from '../Pages/ErrorPage/500'
 
 const router = [
     {
@@ -24,11 +26,19 @@ const router = [
     },
     {
         path:'/TableShow',
-        component:TableShow
+        component:TableShow,
     },
     {
-        path:'/ErrorPage',
-        component:ErrorPage
+        path:'/ErrorPage/403',
+        component:ErrorPage_403
+    },
+    {
+        path:'/ErrorPage/404',
+        component:ErrorPage_404
+    },
+    {
+        path:'/ErrorPage/500',
+        component:ErrorPage_500
     },
 ];
 
@@ -47,7 +57,7 @@ class Routers extends Component {
                             else
                                 return <Route path={r.path}
                                               component={r.component}
-                                              key={r.path}/>;
+                                              key={r.path}  />;
                         })
                     }
 

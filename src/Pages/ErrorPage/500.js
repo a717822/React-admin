@@ -8,12 +8,12 @@ import ErrorTemplate from '../../components/ErrorTemplate/ErrorTemplate'
 
 import { Layout } from 'antd';
 
-class Error_403 extends Component {
+class ErrorPage extends Component {
     constructor(props){
         super(props);
         this.state = {
             errorSet:{
-                type:'404'
+                type:'500'
             },
             pageType:'error'
         };
@@ -48,4 +48,4 @@ class Error_403 extends Component {
     }
 }
 
-export default Error_403;
+export default ErrorPage;
