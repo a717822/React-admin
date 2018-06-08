@@ -5,7 +5,6 @@ import Dashboard from '../Pages/Dashboard/Dashboard';
 /**账户管理**/
 // 登录
 import Login from '../Pages/Login/Login'
-import '../assets/css/App.css';
 
 // 表格
 import TableShow from '../Pages/Table/TableShow'
