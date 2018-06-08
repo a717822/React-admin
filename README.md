@@ -31,5 +31,10 @@ npm start
 2、Ant Design Pro https://pro.ant.design/index-cn
 3、React https://reactjs.org/
 ```
-
+## 特性和优化
+**一、对浏览器的兼容性**
+``` bash
+1、比Ant Design Pro官网上更兼容IE10；
+2、后期可能增加对IE9的兼容性
+```
 
