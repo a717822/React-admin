@@ -38,6 +38,8 @@ npm start
 1、Ant Design https://ant.design/index-cn
 2、Ant Design Pro https://pro.ant.design/index-cn
 3、React https://reactjs.org/
+4、wangeditor3 富文本编辑器 http://www.wangeditor.com/
+               如果有更好的编辑器，请说明
 ```
 ## 特性和优化
 **一、对浏览器的兼容性**
