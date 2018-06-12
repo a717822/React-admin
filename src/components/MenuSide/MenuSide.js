@@ -65,25 +65,6 @@ class MenuSide extends  Component {
                             icon:'form',
                             title:'富文本编辑器',
                             url:'#/Input/Editor'
-                        },
-                        {
-                            id:7,
-                            icon:'user',
-                            title:'nav 3',
-                            child:[
-                                {
-                                    id:8,
-                                    url:'/',
-                                    icon:'mail',
-                                    title:'Option 3'
-                                },
-                                {
-                                    id:9,
-                                    url:'/',
-                                    icon:'mail',
-                                    title:'Option 4'
-                                }
-                            ]
                         }
                     ]
                 },

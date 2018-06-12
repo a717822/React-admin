@@ -28,7 +28,7 @@ class Login extends Component {
                     <div className="login_top">
                         <div className="head_login">
                             <a>
-                                <span>脚爬客后台管理系统</span>
+                                <span>后台管理系统</span>
                             </a>
                         </div>
                     </div>
