@@ -12,6 +12,9 @@ React + ant design + babel-polyfill + react-router/react-router-dom 模仿 ant d
 2、增加错误页面子组件，修改type值就可以修改错误页面；
 3、更新/优化 部分页面；
 4、上传404,500错误svg图标
+2018-06-12：
+1、 优化部分代码
+2、 增加富文本编辑器页面
 ```
 
 ## 如何使用
