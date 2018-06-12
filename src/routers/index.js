@@ -14,6 +14,9 @@ import ErrorPage_403 from '../Pages/ErrorPage/403'
 import ErrorPage_404 from '../Pages/ErrorPage/404'
 import ErrorPage_500 from '../Pages/ErrorPage/500'
 
+// 表单
+import Editor from '../Pages/Input/Editor/Editor'
+
 const router = [
     {
         path:'/',
@@ -39,6 +42,10 @@ const router = [
         path:'/ErrorPage/500',
         component:ErrorPage_500
     },
+    {
+        path:'/Input/Editor',
+        component:Editor
+    }
 ];
 
 class Routers extends Component {

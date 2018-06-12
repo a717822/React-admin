@@ -37,14 +37,14 @@ class Dashboard extends  Component {
                                 </Card>
                             </Col>
                             <Col md={8}>
-                                <Card title="新游记"
+                                <Card title="新文章"
                                       bordered={false}
                                       extra={<a href="#/Dashboard">查看更多</a>} style={{marginBottom:20}}>
                                     0篇
                                 </Card>
                             </Col>
                             <Col md={8}>
-                                <Card title="新脚印"
+                                <Card title="新表格"
                                       bordered={false}
                                       extra={<a href="#/Dashboard">查看更多</a>} style={{marginBottom:20}}>
                                     1个

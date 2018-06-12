@@ -22,7 +22,7 @@ class MenuSide extends  Component {
                     ]
                 },
                 {
-                    title:'后台管理',
+                    title:'显示页面',
                     menu:[
                         {
                             id:2,
@@ -58,12 +58,13 @@ class MenuSide extends  Component {
                     ]
                 },
                 {
-                    title:'前台管理',
+                    title:'输入页面',
                     menu:[
                         {
                             id:6,
-                            icon:'video-camera',
-                            title:'nav 2'
+                            icon:'form',
+                            title:'富文本编辑器',
+                            url:'#/Input/Editor'
                         },
                         {
                             id:7,
@@ -136,7 +137,7 @@ class MenuSide extends  Component {
                                                             return <Menu.Item key={m.id}
                                                                               cate={cate.title}
                                                                               menu={m.title}
-                                                                              parent="" >
+                                                                              parent="">
                                                                         <a href="#/Dashboard">
                                                                             <Icon type={m.icon} />
                                                                             {m.title}

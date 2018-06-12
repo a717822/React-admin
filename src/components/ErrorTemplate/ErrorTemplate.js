@@ -67,6 +67,7 @@ class ErrorTemplate extends Component {
         sessionStorage.setItem('parentMenu','');
         sessionStorage.setItem('menuItem','');
         sessionStorage.setItem('current','');
+        sessionStorage.setItem('sub','');
     }
 }
 
