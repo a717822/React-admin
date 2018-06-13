@@ -15,6 +15,8 @@ React + ant design + babel-polyfill + react-router/react-router-dom 模仿 ant d
 2018-06-12：
 1、 优化部分代码
 2、 增加富文本编辑器页面
+2018-06-13:
+1、增加原生js数据请求方式
 ```
 
 ## 如何使用
@@ -31,6 +33,7 @@ npm start
 1、ant design 
 2、babel-polyfill 解决ES5、ES6对IE浏览器的解决方案
 3、react-router/react-router-dom React路由
+4、wangeditor3 富文本编辑器
 ```
 
 ## 链接
@@ -38,8 +41,7 @@ npm start
 1、Ant Design https://ant.design/index-cn
 2、Ant Design Pro https://pro.ant.design/index-cn
 3、React https://reactjs.org/
-4、wangeditor3 富文本编辑器 http://www.wangeditor.com/
-               如果有更好的编辑器，请说明
+4、wangeditor3 http://www.wangeditor.com/              
 ```
 ## 特性和优化
 **一、对浏览器的兼容性**

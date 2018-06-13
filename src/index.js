@@ -9,6 +9,9 @@ import './assets/css/App.css'
 import Routers from './routers/index';
 
 import registerServiceWorker from './registerServiceWorker';
+import {xmlhttp} from "./assets/Service/xmlhttp";
+
+React.ajax = xmlhttp.method;
 
 ReactDOM.render( <Routers  />, document.getElementById('root'));
 registerServiceWorker();

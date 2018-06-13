@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component , ajax} from 'react';
 import { Layout , Button  } from 'antd';
 
 // 加载部分组件
@@ -15,7 +15,7 @@ class Editor extends  Component {
         super(props);
         this.state = {
             editorContent: ''
-        }
+        };
     }
     render(){
         return(
