@@ -5,11 +5,9 @@ import MenuSide from '../../components/MenuSide/MenuSide'
 import TopHeader from '../../components/TopHeader/TopHeader'
 import CopyRight from '../../components/CopyRight/CopyRight'
 
-import TableTemplate from '../../components/TableTemplate/TableTemplate'
+import { Layout , Button , Popconfirm, message , Table , Modal} from 'antd';
 
-import { Layout , Button , Popconfirm, message} from 'antd';
-
-class Table extends  Component {
+class TableShow extends  Component {
     constructor(props){
         super(props);
         this.state = {
@@ -61,88 +59,87 @@ class Table extends  Component {
                         ),
                     },
                 ],
-                data:[
-                    {
-                        key: '1',
-                        id: 'TradeCode 1',
-                        description: '这是一段描述',
-                        status: '运行中'
-                    },
-                    {
-                        key: '2',
-                        id: 'TradeCode 2',
-                        description: '这是一段描述',
-                        status: '运行中'
-                    },
-                    {
-                        key: '3',
-                        id: 'TradeCode 3',
-                        description: '这是一段描述',
-                        status: '运行中'
-                    },
-                    {
-                        key: '4',
-                        id: 'TradeCode 4',
-                        description: '这是一段描述',
-                        status: '运行中'
-                    },
-                    {
-                        key: '5',
-                        id: 'TradeCode 5',
-                        description: '这是一段描述',
-                        status: '运行中'
-                    },
-                    {
-                        key: '6',
-                        id: 'TradeCode 6',
-                        description: '这是一段描述',
-                        status: '运行中'
-                    },
-                    {
-                        key: '7',
-                        id: 'TradeCode 7',
-                        description: '这是一段描述',
-                        status: '运行中'
-                    },
-                    {
-                        key: '8',
-                        id: 'TradeCode 8',
-                        description: '这是一段描述',
-                        status: '运行中'
-                    },
-                    {
-                        key: '9',
-                        id: 'TradeCode 9',
-                        description: '这是一段描述',
-                        status: '运行中'
-                    },
-                    {
-                        key: '10',
-                        id: 'TradeCode 10',
-                        description: '这是一段描述',
-                        status: '运行中'
-                    },
-                    {
-                        key: '11',
-                        id: 'TradeCode 11',
-                        description: '这是一段描述',
-                        status: '运行中'
-                    },
-                    {
-                        key: '12',
-                        id: 'TradeCode 12',
-                        description: '这是一段描述',
-                        status: '运行中'
-                    },
-                ],
                 rowSelection:{}
             },
+            TableLoading:false,
+            TableData:[
+                {
+                    key: '1',
+                    id: 'TradeCode 1',
+                    description: '这是一段描述',
+                    status: '运行中'
+                },
+                {
+                    key: '2',
+                    id: 'TradeCode 2',
+                    description: '这是一段描述',
+                    status: '运行中'
+                },
+                {
+                    key: '3',
+                    id: 'TradeCode 3',
+                    description: '这是一段描述',
+                    status: '运行中'
+                },
+                {
+                    key: '4',
+                    id: 'TradeCode 4',
+                    description: '这是一段描述',
+                    status: '运行中'
+                },
+                {
+                    key: '5',
+                    id: 'TradeCode 5',
+                    description: '这是一段描述',
+                    status: '运行中'
+                },
+                {
+                    key: '6',
+                    id: 'TradeCode 6',
+                    description: '这是一段描述',
+                    status: '运行中'
+                },
+                {
+                    key: '7',
+                    id: 'TradeCode 7',
+                    description: '这是一段描述',
+                    status: '运行中'
+                },
+                {
+                    key: '8',
+                    id: 'TradeCode 8',
+                    description: '这是一段描述',
+                    status: '运行中'
+                },
+                {
+                    key: '9',
+                    id: 'TradeCode 9',
+                    description: '这是一段描述',
+                    status: '运行中'
+                },
+                {
+                    key: '10',
+                    id: 'TradeCode 10',
+                    description: '这是一段描述',
+                    status: '运行中'
+                },
+                {
+                    key: '11',
+                    id: 'TradeCode 11',
+                    description: '这是一段描述',
+                    status: '运行中'
+                },
+                {
+                    key: '12',
+                    id: 'TradeCode 12',
+                    description: '这是一段描述',
+                    status: '运行中'
+                },
+            ],
             modalSetting:{
                 visible:false,
                 confirmLoading:false
             },
-            Modaltitle:"编辑",
-            ModalText:"<p>测试</p>"
         }
     }
     render(){
@@ -162,16 +159,18 @@ class Table extends  Component {
                     {/*Content start*/}
                     <div style={{ background: '#ECECEC', padding: '30px' , minHeight:'1000px'}}>
 
-                        <TableTemplate columns={this.state.tableSetting.columns}
-                                       data={this.state.tableSetting.data}
-                                       rowSelection={this.state.tableSetting.rowSelection}
+                        <Table columns={this.state.tableSetting.columns}
+                               dataSource={this.state.TableData}
+                               rowSelection={this.state.tableSetting.rowSelection} />
 
-                                       Modaltitle={this.state.Modaltitle}
-                                       visible={this.state.modalSetting.visible}
-                                       confirmLoading={this.state.modalSetting.confirmLoading}
-                                       handleOk={this.handleOk}
-                                       handleCancel={this.handleCancel}
-                                       ModalText={this.state.ModalText}/>
+                        <Modal title={"编辑"}
+                               visible={this.state.modalSetting.visible}
+                               confirmLoading={this.state.modalSetting.confirmLoading}
+                               onOk={this.handleOk}
+                               onCancel={this.handleCancel}
+                               cancelText={"取消"}
+                               okText={"确认"}>
+                        </Modal>
                     </div>
 
                     {/*Content end*/}
@@ -193,17 +192,17 @@ class Table extends  Component {
                 confirmLoading:true
             }
         });
-    }
+    };
     handleCancel = () => {
         this.setState({
             modalSetting:{
                 visible:false
             }
         });
-    }
+    };
     confirm = () =>{
         message.success('删除成功');
     }
 }
 
-export default Table;
+export default TableShow;
