@@ -6,3 +6,21 @@
     margin-top: 20px;
     text-align: right;
 }
+
+/*设置编辑器响应式*/
+.w-e-toolbar{
+    display: block;
+    zoom:1
+}
+.w-e-toolbar:after{
+    display:block;
+    clear:both;
+    content:"";
+    visibility:hidden;
+    height:0;
+}
+.w-e-toolbar .w-e-menu{
+    width: 34px;
+    height: 50px;
+    float: left;
+}
