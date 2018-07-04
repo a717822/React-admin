@@ -34,6 +34,7 @@ npm start
 2、babel-polyfill 解决ES5、ES6对IE浏览器的解决方案
 3、react-router/react-router-dom React路由
 4、wangeditor3 富文本编辑器
+5、yangajax  ajax数据请求方法
 ```
 
 ## 链接
