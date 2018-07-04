@@ -10,7 +10,8 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4",
-    "wangeditor": "^3.1.1"
+    "wangeditor": "^3.1.1",
+    "yangajax": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",

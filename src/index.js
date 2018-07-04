@@ -7,10 +7,9 @@ import 'antd/dist/antd.min.css';
 import './assets/css/App.css'
 
 import Routers from './routers/index';
-import {yangAjax} from "./assets/Service/yangAjax";
+import { yangAjax } from 'yangajax';
 
 import registerServiceWorker from './registerServiceWorker';
-import {yangAjax} from "./assets/Service/yangAjax";
 
 React.ajax = yangAjax;
 
