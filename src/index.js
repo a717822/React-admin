@@ -7,11 +7,12 @@ import 'antd/dist/antd.min.css';
 import './assets/css/App.css'
 
 import Routers from './routers/index';
+import {yangAjax} from "./assets/Service/yangAjax";
 
 import registerServiceWorker from './registerServiceWorker';
-import {xmlhttp} from "./assets/Service/xmlhttp";
+import {yangAjax} from "./assets/Service/yangAjax";
 
-React.ajax = xmlhttp.method;
+React.ajax = yangAjax;
 
 ReactDOM.render( <Routers  />, document.getElementById('root'));
 registerServiceWorker();

@@ -7,6 +7,8 @@ import CopyRight from '../../components/CopyRight/CopyRight'
 
 import { Layout , Button , Popconfirm, message , Table , Modal} from 'antd';
 
+import './TableShow.css'
+
 class TableShow extends  Component {
     constructor(props){
         super(props);
@@ -51,7 +53,11 @@ class TableShow extends  Component {
                                 <Popconfirm title="确定删除该组？"
                                             okText="删除"
                                             cancelText="取消"
-                                            onConfirm={this.confirm}>
+                                            onConfirm={
+                                                ()=>{
+                                                    this.confirm(record.key)
+                                                }
+                                            }>
                                     <Button className="del_btn">删除</Button>
                                 </Popconfirm>
 
@@ -159,18 +165,21 @@ class TableShow extends  Component {
                     {/*Content start*/}
                     <div style={{ background: '#ECECEC', padding: '30px' , minHeight:'1000px'}}>
 
-                        <Table columns={this.state.tableSetting.columns}
-                               dataSource={this.state.TableData}
-                               rowSelection={this.state.tableSetting.rowSelection} />
+                        <div className="table-content">
+                            <Table columns={this.state.tableSetting.columns}
+                                   dataSource={this.state.TableData}
+                                   rowSelection={this.state.tableSetting.rowSelection} />
 
-                        <Modal title={"编辑"}
-                               visible={this.state.modalSetting.visible}
-                               confirmLoading={this.state.modalSetting.confirmLoading}
-                               onOk={this.handleOk}
-                               onCancel={this.handleCancel}
-                               cancelText={"取消"}
-                               okText={"确认"}>
-                        </Modal>
+                            <Modal title={"编辑"}
+                                   visible={this.state.modalSetting.visible}
+                                   confirmLoading={this.state.modalSetting.confirmLoading}
+                                   onOk={this.handleOk}
+                                   onCancel={this.handleCancel}
+                                   cancelText={"取消"}
+                                   okText={"确认"}>
+                            </Modal>
+                        </div>
+
                     </div>
 
                     {/*Content end*/}
@@ -200,7 +209,17 @@ class TableShow extends  Component {
             }
         });
     };
-    confirm = () =>{
+    confirm = (e) =>{
+        const TableData = [...this.state.TableData];
+        this.setState({
+            TableLoading:true
+        });
+
+        this.setState({
+            TableData: TableData.filter(item => item.key !== e),
+            TableLoading:false
+        });
+
         message.success('删除成功');
     }
 }

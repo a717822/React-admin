@@ -1,4 +1,4 @@
-import React, { Component , ajax} from 'react';
+import React, { Component } from 'react';
 import { Layout , Button  } from 'antd';
 
 // 加载部分组件

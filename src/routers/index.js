@@ -55,15 +55,10 @@ class Routers extends Component {
                 <div className='test'>
                     {
                         router.map((r) => {
-                            if(r.path === '/')
-                                return <Route  exact
-                                               path={r.path}
-                                               component={r.component}
-                                               key={r.path}/>;
-                            else
-                                return <Route path={r.path}
-                                              component={r.component}
-                                              key={r.path}  />;
+                            return <Route  exact
+                                           path={r.path}
+                                           component={r.component}
+                                           key={r.path}/>;
                         })
                     }
 

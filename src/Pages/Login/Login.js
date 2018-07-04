@@ -9,13 +9,14 @@ class Login extends Component {
     state = {
         loading: false,
         iconLoading: false,
-    }
+    };
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values);
                 this.setState({ iconLoading: true });
+                window.location.href = '#/Dashboard';
             }
         });
 
