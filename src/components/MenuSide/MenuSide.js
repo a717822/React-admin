@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component , Store } from 'react';
 
 import './MenuSide.css'
 import { Layout, Menu , Icon} from 'antd';
+
 const { Sider } = Layout;
 const SubMenu = Menu.SubMenu;
 
@@ -76,9 +77,17 @@ class MenuSide extends  Component {
     chooseMenu = (e) => {
         let props = e.item.props;
 
-        this.setState({
-            current: e.key
-        });
+        let menu = {
+            menuItem:props.menu,
+            cate:props.cate,
+            parentMenu:props.parent,
+            current:e.key,
+            sub:props.sub
+        };
+
+        // 设置值
+        let store = Store.setStore(menu);
+        console.log('获取store:' , store.getState());
 
         sessionStorage.setItem('menuItem',props.menu);
         sessionStorage.setItem('cate',props.cate);
@@ -86,6 +95,7 @@ class MenuSide extends  Component {
         sessionStorage.setItem('current',e.key);
         sessionStorage.setItem('sub',props.sub);
     };
+
     render(){
         return(
             <Sider breakpoint="lg" collapsedWidth="0">
