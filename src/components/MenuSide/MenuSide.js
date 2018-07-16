@@ -80,9 +80,9 @@ class MenuSide extends  Component {
         let menu = {
             menuItem:props.menu,
             cate:props.cate,
-            parentMenu:props.parent,
+            parentMenu:props.parent?props.parent:'',
             current:e.key,
-            sub:props.sub
+            sub:props.sub?props.sub:''
         };
 
         // 设置值
