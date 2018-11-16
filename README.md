@@ -50,4 +50,5 @@ npm start
 1、比Ant Design Pro官网上更兼容IE10；
 2、后期可能增加对IE9的兼容性
 ```
-
+## TIPS
+更多界面，可查看 https://github.com/a717822/blog_admin
